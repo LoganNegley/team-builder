@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 
 
-function TeamList() {
+function AddMember() {
 
   return (
     <div className="list-wrapper">
-        <h1>Team Members</h1>
+        
     </div>
   );
 }
 
-export default TeamList;
+export default AddMember;
