@@ -14,13 +14,13 @@ const [input, setInput] = useState('')
     <div className="form-wrapper">
         <form>
             <label>
-                <input type='text' onChange={logInput}/>
+                <input type='text' placeholder='name' onChange={logInput}/>
             </label>
             <label>
-                <input type='text'/>
+                <input type='text' placeholder='email'/>
             </label>
             <label>
-                <input type='text'/>
+                <input type='text' placeholder='positon'/>
             </label>
         </form>
         <h1>{input}</h1>
