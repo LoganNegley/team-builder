@@ -4,8 +4,8 @@ import React, {useState} from 'react';
 function AddMember() {
 
 const [name, setName] = useState('')
-const [email, setEmail] = useState('')
-const [positon, setPosition] = useState('')
+// const [email, setEmail] = useState('')
+// const [positon, setPosition] = useState('')
 
     const logInput= event => {
         // console.log(event.target.value)
@@ -18,15 +18,15 @@ const [positon, setPosition] = useState('')
   return (
     <div className="form-wrapper">
         <form>
-            <label>
-                <input type='text' placeholder='name' onChange={logInput}/>
+            <label forHtml='name'>
+                <input type='text' id='name' placeholder='name' onChange={logInput}/>
             </label>
-            <label>
-                <input type='text' placeholder='email' onChange={logInput}/>
+            {/* <label for='email'>
+                <input type='text' id='email' placeholder='email' onChange={logInput}/>
             </label>
-            <label>
-                <input type='text' placeholder='positon'/>
-            </label>
+            <label for='position'>
+                <input type='text' id='position' placeholder='positon'/>
+            </label> */}
             <button onSubmit= {() => submit()} >Submit</button>
         </form>
         <h1>{name}</h1>
