@@ -5,17 +5,19 @@ import AddMember from '../src/components/AddMember';
 
 function App() {
 
-  const [teamMembers, setTeamMembesr] = useState({
+  const [teamMembers, setTeamMembesr] = useState([
+    {
     name:'Logan',
     email:'logannegley@gmail.com',
     position: 'Full Stack Dev',
-  });
+   }
+  ]);
 
   console.log(teamMembers)
 
   return (
     <div className="App">
-      <TeamList teamMembers='teammMembers'/>
+      <TeamList teamMembers={teamMembers}/>
       <AddMember/>
     </div>
   );
