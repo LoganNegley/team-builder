@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import TeamList from '../src/components/TeamList';
+import AddMember from '../src/components/AddMember';
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <TeamList/>
+      <AddMember/>
     </div>
   );
 }

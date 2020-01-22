@@ -4,8 +4,18 @@ import React, {useState} from 'react';
 function AddMember() {
 
   return (
-    <div className="list-wrapper">
-        
+    <div className="form-wrapper">
+        <form>
+            <label>
+                <input></input>
+            </label>
+            <label>
+                <input></input>
+            </label>
+            <label>
+                <input></input>
+            </label>
+        </form>
     </div>
   );
 }
