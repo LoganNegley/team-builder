@@ -7,8 +7,8 @@ const [name, setName] = useState('')
 // const [email, setEmail] = useState('')
 // const [positon, setPosition] = useState('')
 
-    const logInput= event => {
-        // console.log(event.target.value)
+    const handleChanges= event => {
+        console.log(event.target.value);
         setName(event.target.value);
     };
     const submit = () =>{
@@ -18,18 +18,17 @@ const [name, setName] = useState('')
   return (
     <div className="form-wrapper">
         <form>
-            <label forHtml='name'>
-                <input type='text' id='name' placeholder='name' onChange={logInput}/>
+            <label htmlFor='name'>
+                <input type='text' id='name' placeholder='name' onChange={handleChanges}/>
             </label>
-            {/* <label for='email'>
+            {/* <label htmlFor='email'>
                 <input type='text' id='email' placeholder='email' onChange={logInput}/>
             </label>
-            <label for='position'>
+            <label htmlFor='position'>
                 <input type='text' id='position' placeholder='positon'/>
             </label> */}
             <button onSubmit= {() => submit()} >Submit</button>
         </form>
-        <h1>{name}</h1>
     </div>
   );
 }
