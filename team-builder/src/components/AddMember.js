@@ -3,12 +3,17 @@ import React, {useState} from 'react';
 
 function AddMember() {
 
-const [input, setInput] = useState('')
+const [name, setName] = useState('')
+const [email, setEmail] = useState('')
+const [positon, setPosition] = useState('')
 
     const logInput= event => {
-        setInput(event.target.value);
         // console.log(event.target.value)
-    }
+        setName(event.target.value);
+    };
+    const submit = () =>{
+        console.log(name);
+    };
 
   return (
     <div className="form-wrapper">
@@ -17,13 +22,14 @@ const [input, setInput] = useState('')
                 <input type='text' placeholder='name' onChange={logInput}/>
             </label>
             <label>
-                <input type='text' placeholder='email'/>
+                <input type='text' placeholder='email' onChange={logInput}/>
             </label>
             <label>
                 <input type='text' placeholder='positon'/>
             </label>
+            <button onSubmit= {() => submit()} >Submit</button>
         </form>
-        <h1>{input}</h1>
+        <h1>{name}</h1>
     </div>
   );
 }
