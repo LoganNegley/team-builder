@@ -9,27 +9,25 @@ const [name, setName] = useState({name:'', email:''});
 
     const handleChanges= event => {
         console.log(event.target.value);
-        setName( {name: event.target.value});
+        setName( {...name, [event.target.name]:event.target.value});
+        console.log(name);
     };
 
     const submit = (event) =>{
         event.preventDefault();
         props.addNewMember(name);
-        setName({name: '', email:''});
+        setName({name: '', email:'', position:''});
     };
 
   return (
     <div className="form-wrapper">
         <form  onSubmit= {submit} >
             <label htmlFor='name'>Your Name</label>
-                <input type='text' id='name' placeholder={name.name} onChange={handleChanges}/>
-
+                <input type='text' id='name' placeholder={name.name} name='name' onChange={handleChanges}/>
              <label htmlFor='email'>Email</label>
-                <input type='text' id='email' value={name.email} onChange={handleChanges} />
-
-            {/* <label htmlFor='position'>
+                <input type='text' id='email' value={name.email} name='email' onChange={handleChanges} />
+             <label htmlFor='position'>Position</label>  
                 <input type='text' id='position' placeholder='positon'/>
-            </label>  */}
             <button type='submit'>Submit</button>
         </form>
     </div>
