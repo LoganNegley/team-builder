@@ -9,7 +9,7 @@ console.log(props)
         <h1>Team Members</h1>
         <div className='team-list-container'>
             {props.teamMembers.map((member, index) => (
-                <div className='teamMember' key={member.index}>
+                <div className='teamMember'>
                     <h2>{member.name}</h2>
                     <p>Email: {member.email}</p>
                     <p>Position: {member.position}</p>

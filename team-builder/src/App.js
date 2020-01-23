@@ -17,8 +17,9 @@ function App() {
 
   return (
     <div className="App">
-      <TeamList teamMembers={teamMembers}/>
       <AddMember/>
+      <TeamList teamMembers={teamMembers}/>
+
     </div>
   );
 }
