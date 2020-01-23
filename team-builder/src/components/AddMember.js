@@ -1,16 +1,17 @@
 import React, {useState} from 'react';
 
 
-function AddMember() {
-
-const [name, setName] = useState('')
+function AddMember(props) {
+console.log( props)
+const [name, setName] = useState({name:''});
 // const [email, setEmail] = useState('')
 // const [positon, setPosition] = useState('')
 
     const handleChanges= event => {
         console.log(event.target.value);
-        setName(event.target.value);
+        setName( {name: event.target.value});
     };
+
     const submit = () =>{
         console.log(name);
     };
@@ -27,7 +28,7 @@ const [name, setName] = useState('')
             <label htmlFor='position'>
                 <input type='text' id='position' placeholder='positon'/>
             </label> */}
-            <button onSubmit= {() => submit()} >Submit</button>
+            <button type='submit' onSubmit= {() => submit()} >Submit</button>
         </form>
     </div>
   );
