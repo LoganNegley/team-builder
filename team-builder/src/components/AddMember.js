@@ -15,18 +15,18 @@ const [name, setName] = useState({name:'', email:''});
     const submit = (event) =>{
         event.preventDefault();
         props.addNewMember(name);
-        setName({name: ''});
+        setName({name: '', email:''});
     };
 
   return (
     <div className="form-wrapper">
         <form  onSubmit= {submit} >
-            <label htmlFor='name'>
-                <input type='text' id='name' placeholder='name' onChange={handleChanges}/>
-            </label>
-             <label htmlFor='email'>
-                <input type='text' id='email' placeholder='email' onChange={handleChanges} />
-            </label> 
+            <label htmlFor='name'>Your Name</label>
+                <input type='text' id='name' placeholder={name.name} onChange={handleChanges}/>
+
+             <label htmlFor='email'>Email</label>
+                <input type='text' id='email' value={name.email} onChange={handleChanges} />
+
             {/* <label htmlFor='position'>
                 <input type='text' id='position' placeholder='positon'/>
             </label>  */}
